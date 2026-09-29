@@ -60,6 +60,18 @@ namespace MathLib
         }
         return result;
     }
+    // Function for raising a number to a power using recursion
+template <typename T>
+T power(T base, int exponent)
+{
+if (exponent == 0)
+return 1;
+
+if (exponent < 0)
+return 1 / power(base, -exponent);
+
+return base * power(base, exponent - 1);
+}
  
     // Function to check whether value is prime
     bool isPrime(int n);

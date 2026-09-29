@@ -77,3 +77,17 @@ TEST_F(MathLibTestFixture, GreatestCommonDivider)
 {
     EXPECT_EQ(MathLib::GCD(10, 6), 2);
 }
+
+{
+EXPECT_EQ(MathLib::power(2, 0), 1);
+EXPECT_EQ(MathLib::power(2, 1), 2);
+EXPECT_EQ(MathLib::power(2, 2), 4);
+EXPECT_EQ(MathLib::power(2, 3), 8);
+EXPECT_EQ(MathLib::power(2, 5), 32);
+EXPECT_EQ(MathLib::power(3, 4), 81);
+}
+
+TEST(PowerTest, CalculatesNegativeExponent)
+{
+EXPECT_DOUBLE_EQ(MathLib::power(2.0, -2), 0.25);
+}
