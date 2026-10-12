@@ -77,3 +77,12 @@ TEST_F(MathLibTestFixture, GreatestCommonDivider)
 {
     EXPECT_EQ(MathLib::GCD(10, 6), 2);
 }
+
+// >>> ДОДАНО: test for findThirdAngle
+TEST_F(MathLibTestFixture, FindThirdAngle)
+{
+    EXPECT_TRUE(MathLib::isEqual(MathLib::findThirdAngle(60.0, 60.0), 60.0));
+    EXPECT_TRUE(MathLib::isEqual(MathLib::findThirdAngle(90.0, 45.0), 45.0));
+    EXPECT_TRUE(MathLib::isEqual(MathLib::findThirdAngle(30.0, 50.0), 100.0));
+    EXPECT_FALSE(MathLib::isEqual(MathLib::findThirdAngle(30.0, 50.0), 90.0));
+}
