@@ -42,5 +42,10 @@ namespace MathLib
 		if (b == 0) return a;
 		return GCD(b, a % b);
 	}
-}
 
+    // >>> ДОДАНО: function to find the third angle of a triangle
+    double findThirdAngle(double angleA, double angleB)
+    {
+        return 180.0 - (angleA + angleB);
+    }
+}
